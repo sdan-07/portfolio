@@ -12,9 +12,9 @@ export default function Contact() {
       <div className="relative overflow-hidden rounded-xl border-hairline bg-surface-container-low/80 p-8 md:p-12">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="space-y-6 lg:col-span-5">
-            <div className="font-mono text-xs uppercase tracking-wider text-primary">05 // Transmission</div>
+            <div className="font-mono text-xs uppercase tracking-wider text-primary">05 // Contact</div>
             <h2 className="text-3xl font-semibold tracking-tight md:text-[2.5rem]">
-              Let's connect & build together.
+              Get In touch.
             </h2>
             <p className="leading-relaxed text-on-surface-variant">
               I am actively seeking full-time Software Engineering / Web Development roles starting immediately. Open to remote or on-site opportunities.
@@ -31,19 +31,19 @@ export default function Contact() {
           <div className="rounded-lg border-hairline bg-surface-container-lowest/90 p-6 lg:col-span-7 md:p-8">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">
-                <Input label="NAME / IDENTIFIER" name="name" placeholder="e.g. Alex Doe" required />
+                <Input label="NAME" name="name" placeholder="e.g. Alex Doe" required />
                 <Input label="ELECTRONIC MAIL" name="email" type="email" placeholder="name@email.com" required />
               </div>
 
-              <Input label="PROJECT SCOPE & TIMELINE" name="project" placeholder="e.g. Full-Stack Web Platform, Q2 launch" />
+              <Input label="ROLE / POSITION HIRING FOR" name="project" placeholder="e.g. Software Engineer, SDE Intern" />
 
               <label className="block space-y-1.5">
-                <span className="font-mono text-xs text-outline">MESSAGE PAYLOAD</span>
+                <span className="font-mono text-xs text-outline">MESSAGE</span>
                 <textarea
                   name="message"
                   required
                   rows={4}
-                  placeholder="Provide context about your technical stack, architecture challenges, or milestones..."
+                  placeholder="Tell me about the role or opportunity..."
                   className="w-full resize-none rounded border border-outline-variant/30 bg-surface-container px-3 py-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
                 />
               </label>
@@ -51,7 +51,7 @@ export default function Contact() {
               <div className="flex items-center justify-between pt-2">
                 <span className="font-mono text-xs text-outline">● 256-bit TLS encrypted</span>
                 <button type="submit" className="cursor-pointer flex items-center gap-2 rounded bg-on-surface px-6 py-2.5 text-sm font-medium text-surface-container-lowest hover:bg-primary-container">
-                  Transmit Message <MaterialIcon className="text-base">send</MaterialIcon>
+                  Send Message <MaterialIcon className="text-base">send</MaterialIcon>
                 </button>
               </div>
             </form>

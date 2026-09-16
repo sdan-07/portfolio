@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <a href="#" className="flex items-center gap-2 font-mono font-bold">
             <span className="h-2.5 w-2.5 rounded bg-primary-container shadow-[0_0_8px_#38bdf8]" />
-            dev.sys
+            sd.dev
           </a>
 
           <div className="hidden items-center gap-2 rounded-full border border-outline-variant/40 bg-surface-container-high/80 px-2.5 py-0.5 sm:flex">
@@ -49,7 +49,9 @@ export default function Navbar() {
             className="flex h-9 w-9 items-center justify-center rounded border border-outline-variant/30 bg-surface-container-low text-on-surface-variant hover:text-primary">
             <MaterialIcon className="text-lg">terminal</MaterialIcon>
           </a>
-          <a href="#"
+          <a href="/resume/SoumyadipDan_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1.5 rounded bg-on-surface px-3.5 py-1.5 font-mono text-xs font-medium text-surface-container-lowest hover:bg-primary-container">
             Resume <MaterialIcon className="text-sm">arrow_outward</MaterialIcon>
           </a>

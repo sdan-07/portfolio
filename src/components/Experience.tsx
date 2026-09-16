@@ -6,7 +6,7 @@ export default function Experience() {
     <section id="experience" className="scroll-mt-24 space-y-10">
       <SectionHeader
         number="03"
-        label="Track Record"
+        label="eDUCATION"
         title="Education & Experience"
         description="Chronological engineering impact and leadership responsibilities."
       />
