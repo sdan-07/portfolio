@@ -4,54 +4,113 @@ import MaterialIcon from "./MaterialIcon";
 export default function Contact() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    window.alert("Message dispatched successfully to Alex Rivera.");
+    window.alert("Message dispatched successfully to Soumyadip Dan.");
   };
 
   return (
-    <section id="contact" className="scroll-mt-24 pt-4">
-      <div className="relative overflow-hidden rounded-xl border-hairline bg-surface-container-low/80 p-8 md:p-12">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
-          <div className="space-y-6 lg:col-span-5">
-            <div className="font-mono text-xs uppercase tracking-wider text-primary">05 // Contact</div>
-            <h2 className="text-3xl font-semibold tracking-tight md:text-[2.5rem]">
+    <section id="contact" className="scroll-mt-24 pt-2 sm:pt-4">
+      <div className="relative overflow-hidden rounded-xl border-hairline bg-surface-container-low/80 p-4 sm:p-6 md:p-8 lg:p-12">
+        <div className="grid min-w-0 grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-12">
+          {/* LEFT — CONTACT INFO */}
+          <div className="min-w-0 space-y-5 sm:space-y-6 lg:col-span-5">
+            <div className="font-mono text-[10px] uppercase tracking-wider text-primary sm:text-xs">
+              05 // Contact
+            </div>
+
+            <h2 className="text-2xl font-semibold tracking-tight text-on-surface sm:text-3xl md:text-[2.5rem]">
               Get In touch.
             </h2>
-            <p className="leading-relaxed text-on-surface-variant">
-              I am actively seeking full-time Software Engineering / Web Development roles starting immediately. Open to remote or on-site opportunities.
+
+            <p className="max-w-xl text-sm leading-6 text-on-surface-variant sm:leading-relaxed">
+              I am actively seeking full-time Software Engineering / Web
+              Development roles starting immediately. Open to remote or
+              on-site opportunities.
             </p>
 
-            <div className="space-y-3">
-              <ContactItem icon="mail" text="soumyadipdan7@gmail.com" />
-              <ContactItem icon="schedule" text="IST / UTC+5:30 • Typically responds in < 2 hrs" />
-              <ContactLink icon="code" text="github.com/sdan-07" href="https://github.com/sdan-07" />
-              <ContactLink icon="link" text="linkedin.com/in/soumyadip-dan-538320303" href="https://linkedin.com/in/soumyadip-dan-538320303" />
+            {/* Contact Details */}
+            <div className="space-y-3 pt-1">
+              <ContactItem
+                icon="mail"
+                text="soumyadipdan7@gmail.com"
+              />
+
+              <ContactItem
+                icon="schedule"
+                text="IST / UTC+5:30 • Typically responds in < 2 hrs"
+              />
+
+              <ContactLink
+                icon="code"
+                text="github.com/sdan-07"
+                href="https://github.com/sdan-07"
+              />
+
+              <ContactLink
+                icon="link"
+                text="linkedin.com/in/soumyadip-dan-538320303"
+                href="https://linkedin.com/in/sdan-07"
+              />
             </div>
           </div>
 
-          <div className="rounded-lg border-hairline bg-surface-container-lowest/90 p-6 lg:col-span-7 md:p-8">
+          {/* RIGHT — FORM */}
+          <div className="min-w-0 rounded-lg border-hairline bg-surface-container-lowest/90 p-4 sm:p-6 md:p-8 lg:col-span-7">
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <Input label="NAME" name="name" placeholder="e.g. Alex Doe" required />
-                <Input label="ELECTRONIC MAIL" name="email" type="email" placeholder="name@email.com" required />
+              {/* Name + Email */}
+              <div className="grid min-w-0 gap-4 sm:grid-cols-2">
+                <Input
+                  label="NAME"
+                  name="name"
+                  placeholder="e.g. Alex Doe"
+                  required
+                />
+
+                <Input
+                  label="ELECTRONIC MAIL"
+                  name="email"
+                  type="email"
+                  placeholder="name@email.com"
+                  required
+                />
               </div>
 
-              <Input label="ROLE / POSITION HIRING FOR" name="project" placeholder="e.g. Software Engineer, SDE Intern" />
+              {/* Role */}
+              <Input
+                label="ROLE / POSITION HIRING FOR"
+                name="project"
+                placeholder="e.g. Software Engineer, SDE Intern"
+              />
 
+              {/* Message */}
               <label className="block space-y-1.5">
-                <span className="font-mono text-xs text-outline">MESSAGE</span>
+                <span className="font-mono text-[10px] text-outline sm:text-xs">
+                  MESSAGE
+                </span>
+
                 <textarea
                   name="message"
                   required
-                  rows={4}
+                  rows={5}
                   placeholder="Tell me about the role or opportunity..."
-                  className="w-full resize-none rounded border border-outline-variant/30 bg-surface-container px-3 py-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+                  className="w-full min-w-0 resize-y rounded border border-outline-variant/30 bg-surface-container px-3 py-2.5 text-sm leading-relaxed outline-none transition-colors placeholder:text-outline/60 focus:border-primary focus:ring-1 focus:ring-primary"
                 />
               </label>
 
-              <div className="flex items-center justify-between pt-2">
-                <span className="font-mono text-xs text-outline">● 256-bit TLS encrypted</span>
-                <button type="submit" className="cursor-pointer flex items-center gap-2 rounded bg-on-surface px-6 py-2.5 text-sm font-medium text-surface-container-lowest hover:bg-primary-container">
-                  Send Message <MaterialIcon className="text-base">send</MaterialIcon>
+              {/* Footer */}
+              <div className="flex flex-col gap-4 border-t border-outline-variant/20 pt-4 sm:flex-row sm:items-center sm:justify-between sm:gap-3 sm:border-0 sm:pt-2">
+                <span className="font-mono text-[10px] text-outline sm:text-xs">
+                  ● 256-bit TLS encrypted
+                </span>
+
+                <button
+                  type="submit"
+                  className="flex w-full cursor-pointer items-center justify-center gap-2 rounded bg-on-surface px-5 py-3 text-sm font-medium text-surface-container-lowest transition-colors hover:bg-primary-container sm:w-auto sm:px-6 sm:py-2.5"
+                >
+                  Send Message
+
+                  <MaterialIcon className="text-base">
+                    send
+                  </MaterialIcon>
                 </button>
               </div>
             </form>
@@ -62,41 +121,83 @@ export default function Contact() {
   );
 }
 
-function Input({ label, name, type = "text", placeholder, required = false }: {
-  label: string; name: string; type?: string; placeholder: string; required?: boolean;
+function Input({
+  label,
+  name,
+  type = "text",
+  placeholder,
+  required = false,
+}: {
+  label: string;
+  name: string;
+  type?: string;
+  placeholder: string;
+  required?: boolean;
 }) {
   return (
-    <label className="block space-y-1.5">
-      <span className="font-mono text-xs text-outline">{label}</span>
+    <label className="block min-w-0 space-y-1.5">
+      <span className="font-mono text-[10px] text-outline sm:text-xs">
+        {label}
+      </span>
+
       <input
         name={name}
         type={type}
         required={required}
         placeholder={placeholder}
-        className="w-full rounded border border-outline-variant/30 bg-surface-container px-3 py-2 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+        className="w-full min-w-0 rounded border border-outline-variant/30 bg-surface-container px-3 py-2.5 text-sm outline-none transition-colors placeholder:text-outline/60 focus:border-primary focus:ring-1 focus:ring-primary"
       />
     </label>
   );
 }
 
-function ContactItem({ icon, text }: { icon: string; text: string }) {
+function ContactItem({
+  icon,
+  text,
+}: {
+  icon: string;
+  text: string;
+}) {
   return (
-    <div className="flex items-center gap-3">
-      <span className="flex h-8 w-8 items-center justify-center rounded bg-surface-container text-primary">
-        <MaterialIcon className="text-lg">{icon}</MaterialIcon>
+    <div className="flex min-w-0 items-start gap-3">
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded bg-surface-container text-primary">
+        <MaterialIcon className="text-lg">
+          {icon}
+        </MaterialIcon>
       </span>
-      <span className="font-mono text-sm">{text}</span>
+
+      <span className="min-w-0 break-words pt-1 font-mono text-xs leading-relaxed text-on-surface sm:text-sm">
+        {text}
+      </span>
     </div>
   );
 }
 
-function ContactLink({ icon, text, href }: { icon: string; text: string; href: string }) {
+function ContactLink({
+  icon,
+  text,
+  href,
+}: {
+  icon: string;
+  text: string;
+  href: string;
+}) {
   return (
-    <div className="flex items-center gap-3">
-      <span className="flex h-8 w-8 items-center justify-center rounded bg-surface-container text-primary">
-        <MaterialIcon className="text-lg">{icon}</MaterialIcon>
+    <div className="flex min-w-0 items-start gap-3">
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded bg-surface-container text-primary">
+        <MaterialIcon className="text-lg">
+          {icon}
+        </MaterialIcon>
       </span>
-      <a href={href} target="_blank" rel="noreferrer" className="text-sm text-primary hover:underline">{text}</a>
+
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        className="min-w-0 break-all pt-1 text-xs leading-relaxed text-primary hover:underline sm:text-sm"
+      >
+        {text}
+      </a>
     </div>
   );
 }

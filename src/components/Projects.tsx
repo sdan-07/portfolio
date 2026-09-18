@@ -23,12 +23,12 @@ const otherExplorations = [
       "Small UI experiment exploring React pagination. A gallery application implements fetching images from Fake API.",
     stack: ["React", "Tailwind CSS", "Grid-Layout", "Axios"],
     github: "https://github.com/sdan-07/React-GalleryApp",
-  }
+  },
 ];
 
 export default function Projects() {
   return (
-    <section id="work" className="scroll-mt-24 space-y-12">
+    <section id="work" className="scroll-mt-24 space-y-10 sm:space-y-12">
       <SectionHeader
         number="01"
         label="Engineering Deliverables"
@@ -37,25 +37,26 @@ export default function Projects() {
       />
 
       {/* Featured Projects */}
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {projects.map((project, index) => (
           <article
             key={project.title}
-            className="group relative min-h-[460px] overflow-hidden rounded-xl border border-outline-variant/30 bg-surface-container-low/80 p-6 backdrop-blur-md transition-all duration-300 hover:border-primary/30 hover:bg-surface-container-low lg:min-h-[500px]"
+            className="group relative overflow-hidden rounded-xl border border-outline-variant/30 bg-surface-container-low/80 p-3 backdrop-blur-md transition-all duration-300 hover:border-primary/30 hover:bg-surface-container-low sm:p-5 lg:min-h-[500px] lg:p-6"
           >
             {/* Project number */}
-            <div className="absolute right-6 top-5 z-10 font-mono text-xs text-outline/50">
+            <div className="absolute right-4 top-4 z-10 font-mono text-[10px] text-outline/50 sm:right-6 sm:top-5 sm:text-xs">
               0{index + 1}
             </div>
 
-            <div className="grid h-full gap-8 lg:grid-cols-[1fr_1.05fr]">
+            <div className="grid gap-6 lg:h-full lg:grid-cols-[1fr_1.05fr] lg:gap-8">
               {/* =========================
                   LEFT — PROJECT DETAILS
                   ========================= */}
-              <div className="flex min-h-[400px] flex-col py-2 lg:pr-4">
-                <div className="mb-5 flex flex-wrap items-center gap-2">
+              <div className="flex min-w-0 flex-col py-2 lg:min-h-[400px] lg:pr-4">
+                {/* Tags */}
+                <div className="mb-4 flex flex-wrap items-center gap-2 sm:mb-5">
                   <span
-                    className={`rounded-md border px-2.5 py-1 font-mono text-xs ${
+                    className={`rounded-md border px-2 py-1 font-mono text-[10px] sm:px-2.5 sm:py-1 sm:text-xs ${
                       project.accent === "primary"
                         ? "border-primary/20 bg-primary/10 text-primary"
                         : project.accent === "secondary"
@@ -66,32 +67,34 @@ export default function Projects() {
                     {project.type}
                   </span>
 
-                  <span className="rounded-md border border-emerald-800/40 bg-emerald-950/40 px-2 py-1 font-mono text-xs text-emerald-400">
+                  <span className="rounded-md border border-emerald-800/40 bg-emerald-950/40 px-2 py-1 font-mono text-[10px] text-emerald-400 sm:text-xs">
                     {project.badge}
                   </span>
                 </div>
 
-                <h3 className="mb-4 text-3xl font-semibold tracking-tight text-on-surface">
+                {/* Title */}
+                <h3 className="mb-3 pr-8 text-xl font-semibold leading-tight tracking-tight text-on-surface sm:mb-4 sm:text-2xl lg:text-3xl">
                   {project.title}
                 </h3>
 
-                <p className="max-w-xl text-sm leading-7 text-on-surface-variant">
+                {/* Description */}
+                <p className="max-w-xl text-xs leading-6 text-on-surface-variant sm:text-sm sm:leading-7">
                   {project.description}
                 </p>
 
                 {/* Highlights */}
-                <div className="mt-7">
-                  <div className="mb-3 font-mono text-xs uppercase tracking-wider text-outline">
+                <div className="mt-6 sm:mt-7">
+                  <div className="mb-3 font-mono text-[10px] uppercase tracking-wider text-outline sm:text-xs">
                     Core Highlights
                   </div>
 
-                  <ul className="space-y-2.5 text-sm leading-relaxed text-slate-300">
+                  <ul className="space-y-2 text-xs leading-relaxed text-slate-300 sm:space-y-2.5 sm:text-sm">
                     {project.highlights.map((item) => (
                       <li
                         key={item}
                         className="flex items-start gap-2.5"
                       >
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/70" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/70 sm:mt-2" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -99,27 +102,30 @@ export default function Projects() {
                 </div>
 
                 {/* Bottom area */}
-                <div className="mt-auto pt-8">
-                  <div className="mb-5 flex flex-wrap gap-2 border-t border-outline-variant/30 pt-5">
+                <div className="mt-7 pt-2 sm:mt-auto sm:pt-8">
+                  {/* Tech Stack */}
+                  <div className="mb-5 flex flex-wrap gap-1.5 border-t border-outline-variant/30 pt-4 sm:gap-2 sm:pt-5">
                     {project.stack.map((item) => (
                       <span
                         key={item}
-                        className="rounded-md border border-outline-variant/40 bg-surface-container-high px-2.5 py-1 font-mono text-xs text-on-surface-variant transition-colors group-hover:border-outline-variant/60 group-hover:text-on-surface"
+                        className="rounded-md border border-outline-variant/40 bg-surface-container-high px-2 py-1 font-mono text-[10px] text-on-surface-variant transition-colors group-hover:border-outline-variant/60 group-hover:text-on-surface sm:px-2.5 sm:text-xs"
                       >
                         {item}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-5">
+                  {/* Links */}
+                  <div className="flex flex-wrap gap-4 sm:gap-5">
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary-container"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-primary transition-colors hover:text-primary-container sm:text-sm"
                     >
                       {project.action}
-                      <MaterialIcon className="text-base">
+
+                      <MaterialIcon className="text-sm sm:text-base">
                         arrow_outward
                       </MaterialIcon>
                     </a>
@@ -128,9 +134,9 @@ export default function Projects() {
                       href={project.source}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 text-sm text-on-surface-variant transition-colors hover:text-on-surface"
+                      className="inline-flex items-center gap-1.5 text-xs text-on-surface-variant transition-colors hover:text-on-surface sm:text-sm"
                     >
-                      <MaterialIcon className="text-base">
+                      <MaterialIcon className="text-sm sm:text-base">
                         code
                       </MaterialIcon>
                       Source
@@ -142,33 +148,33 @@ export default function Projects() {
               {/* =========================
                   RIGHT — SCREENSHOT AREA
                   ========================= */}
-              <div className="relative min-h-[300px] overflow-hidden rounded-lg border border-outline-variant/30 bg-surface-container-lowest/70 lg:min-h-[440px]">
+              <div className="relative min-h-[220px] overflow-hidden rounded-lg border border-outline-variant/30 bg-surface-container-lowest/70 xs:min-h-[260px] sm:min-h-[320px] lg:min-h-[440px]">
                 {/* Screenshot placeholder */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg border border-outline-variant/40 bg-surface-container-high">
-                    <MaterialIcon className="text-2xl text-outline">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-5 text-center sm:p-8">
+                  <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg border border-outline-variant/40 bg-surface-container-high sm:mb-4 sm:h-14 sm:w-14">
+                    <MaterialIcon className="text-xl text-outline sm:text-2xl">
                       image
                     </MaterialIcon>
                   </div>
 
-                  <p className="font-mono text-xs uppercase tracking-wider text-outline">
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-outline sm:text-xs">
                     Project Screenshot
                   </p>
 
-                  <p className="mt-2 max-w-xs text-xs leading-5 text-outline/70">
+                  <p className="mt-2 max-w-xs text-[10px] leading-5 text-outline/70 sm:text-xs">
                     Replace this area with a screenshot of the project.
                   </p>
                 </div>
 
                 {/* Browser-style top bar */}
-                <div className="absolute left-0 right-0 top-0 flex h-9 items-center gap-1.5 border-b border-outline-variant/20 bg-surface-container-highest/40 px-3">
-                  <span className="h-2 w-2 rounded-full bg-red-400/50" />
-                  <span className="h-2 w-2 rounded-full bg-yellow-400/50" />
-                  <span className="h-2 w-2 rounded-full bg-emerald-400/50" />
+                <div className="absolute left-0 right-0 top-0 flex h-8 items-center gap-1.5 border-b border-outline-variant/20 bg-surface-container-highest/40 px-3 sm:h-9">
+                  <span className="h-1.5 w-1.5 rounded-full bg-red-400/50 sm:h-2 sm:w-2" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-yellow-400/50 sm:h-2 sm:w-2" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400/50 sm:h-2 sm:w-2" />
                 </div>
 
-                {/* 
-                  When you have an image, replace the placeholder above with:
+                {/*
+                  When you have an image:
 
                   <img
                     src="/projects/project-name.png"
@@ -185,14 +191,14 @@ export default function Projects() {
       {/* =========================
           OTHER EXPLORATIONS
           ========================= */}
-      <div className="pt-4">
+      <div className="pt-2 sm:pt-4">
         <div className="mb-5 flex items-end justify-between gap-4">
-          <div>
-            <div className="mb-1 font-mono text-xs uppercase tracking-wider text-outline">
+          <div className="min-w-0">
+            <div className="mb-1 font-mono text-[10px] uppercase tracking-wider text-outline sm:text-xs">
               More in the lab
             </div>
 
-            <h3 className="text-lg font-semibold text-on-surface">
+            <h3 className="text-base font-semibold text-on-surface sm:text-lg">
               Other Explorations
             </h3>
           </div>
@@ -201,23 +207,25 @@ export default function Projects() {
             href="https://github.com/sdan-07?tab=repositories"
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-1.5 text-sm text-on-surface-variant transition-colors hover:text-primary sm:flex"
+            className="hidden shrink-0 items-center gap-1.5 text-xs text-on-surface-variant transition-colors hover:text-primary sm:flex sm:text-sm"
           >
             View all repositories
+
             <MaterialIcon className="text-base">
               arrow_outward
             </MaterialIcon>
           </a>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3">
+        {/* Repository Cards */}
+        <div className="grid gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
           {otherExplorations.map((repo) => (
             <a
               key={repo.title}
               href={repo.github}
               target="_blank"
               rel="noreferrer"
-              className="group rounded-lg border border-outline-variant/25 bg-surface-container-low/50 p-5 transition-all duration-300 hover:border-primary/25 hover:bg-surface-container-low"
+              className="group flex min-w-0 flex-col rounded-lg border border-outline-variant/25 bg-surface-container-low/50 p-4 transition-all duration-300 hover:border-primary/25 hover:bg-surface-container-low sm:p-5"
             >
               <div className="mb-4 flex items-center justify-between">
                 <MaterialIcon className="text-xl text-outline transition-colors group-hover:text-primary">
@@ -229,11 +237,11 @@ export default function Projects() {
                 </MaterialIcon>
               </div>
 
-              <h4 className="mb-2 font-medium text-on-surface">
+              <h4 className="mb-2 break-words text-sm font-medium text-on-surface sm:text-base">
                 {repo.title}
               </h4>
 
-              <p className="mb-5 text-xs leading-6 text-on-surface-variant">
+              <p className="mb-5 flex-1 text-xs leading-6 text-on-surface-variant">
                 {repo.description}
               </p>
 
@@ -241,7 +249,7 @@ export default function Projects() {
                 {repo.stack.map((item) => (
                   <span
                     key={item}
-                    className="rounded border border-outline-variant/30 bg-surface-container-high px-2 py-0.5 font-mono text-[11px] text-outline"
+                    className="rounded border border-outline-variant/30 bg-surface-container-high px-2 py-0.5 font-mono text-[10px] text-outline sm:text-[11px]"
                   >
                     {item}
                   </span>
@@ -250,6 +258,19 @@ export default function Projects() {
             </a>
           ))}
         </div>
+
+        {/* Mobile GitHub Link */}
+        <a
+          href="https://github.com/sdan-07?tab=repositories"
+          target="_blank"
+          rel="noreferrer"
+          className="mt-5 flex w-full items-center justify-center gap-2 rounded-lg border border-outline-variant/30 px-4 py-3 text-xs text-on-surface-variant transition-colors hover:border-primary/30 hover:text-primary sm:hidden"
+        >
+          View all repositories
+          <MaterialIcon className="text-sm">
+            arrow_outward
+          </MaterialIcon>
+        </a>
       </div>
     </section>
   );

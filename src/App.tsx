@@ -13,7 +13,7 @@ export default function App() {
       <Background />
       <Navbar />
 
-      <main className="relative z-10 mx-auto flex max-w-7xl flex-col space-y-28 px-6 pb-24 pt-12 md:space-y-36 md:pt-20">
+      <main className="relative z-10 mx-auto flex max-w-7xl flex-col space-y-20 px-4 pb-16 pt-10 sm:px-6 sm:pb-24 md:space-y-36 md:pt-20">
         <Hero />
         <Projects />
         <TechStack />
