@@ -1,6 +1,5 @@
 import { projects } from "../data/portfolio";
 import SectionHeader from "./SectionHeader";
-import MaterialIcon from "./MaterialIcon";
 import { ArrowUpRight, Code, Folder } from "lucide-react";
 
 const otherExplorations = [
@@ -154,9 +153,9 @@ export default function Projects() {
                 {/* Screenshot placeholder */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-5 text-center sm:p-8">
                   <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg border border-outline-variant/40 bg-surface-container-high sm:mb-4 sm:h-14 sm:w-14">
-                    <MaterialIcon className="text-xl text-outline sm:text-2xl">
+                    {/* <MaterialIcon className="text-xl text-outline sm:text-2xl">
                       image
-                    </MaterialIcon>
+                    </MaterialIcon> */}
                   </div>
 
                   <p className="font-mono text-[10px] uppercase tracking-wider text-outline sm:text-xs">

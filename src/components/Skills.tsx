@@ -1,8 +1,7 @@
 import { stackGroups } from "../data/portfolio";
 import SectionHeader from "./SectionHeader";
-import MaterialIcon from "./MaterialIcon";
 
-export default function TechStack() {
+export default function Skills() {
   return (
     <section id="stack" className="scroll-mt-24 space-y-8 sm:space-y-10">
       <SectionHeader

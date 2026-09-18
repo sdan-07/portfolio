@@ -1,11 +1,10 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
-import TechStack from "./components/TechStack";
 import Experience from "./components/Experience";
-import Endorsements from "./components/Endorsements";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Skills from "./components/Skills";
 
 export default function App() {
   return (
@@ -16,9 +15,8 @@ export default function App() {
       <main className="relative z-10 mx-auto flex max-w-7xl flex-col space-y-20 px-4 pb-16 pt-10 sm:px-6 sm:pb-24 md:space-y-36 md:pt-20">
         <Hero />
         <Projects />
-        <TechStack />
+        <Skills />
         <Experience />
-        {/* <Endorsements /> */}
         <Contact />
       </main>
 

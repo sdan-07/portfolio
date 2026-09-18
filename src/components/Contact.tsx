@@ -47,14 +47,14 @@ export default function Contact() {
 
               <ContactLink
                 icon={Code2}
-                text="github.com/sdan-07"
+                text="Github"
                 href="https://github.com/sdan-07"
               />
 
               <ContactLink
                 icon={Globe}
-                text="linkedin.com/in/soumyadip-dan-538320303"
-                href="https://linkedin.com/in/sdan-07"
+                text="LinkedIn"
+                href="https://linkedin.com/in/soumyadip-dan-538320303"
               />
             </div>
           </div>
