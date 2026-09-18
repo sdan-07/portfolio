@@ -18,7 +18,7 @@ export default function Navbar() {
       .map(([, href]) => href.replace("#", ""))
       .filter(Boolean)
       .map((id) => document.getElementById(id))
-      .filter(Boolean);
+      .filter((section): section is HTMLElement => section !== null);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -44,7 +44,7 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
-  const handleNavClick = (href) => {
+  const handleNavClick = (href: any) => {
     const section = href.replace("#", "");
 
     setActiveSection(section);
