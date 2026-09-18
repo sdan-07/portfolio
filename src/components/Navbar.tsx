@@ -5,7 +5,7 @@ const links = [
   ["About", "#"],
   ["Projects", "#work"],
   ["Skills", "#stack"],
-  ["Education & Exp", "#experience"],
+  ["Education", "#experience"],
   ["Contact", "#contact"],
 ];
 
@@ -137,7 +137,7 @@ export default function Navbar() {
             href="/resume/SoumyadipDan_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 rounded bg-on-surface px-3 py-1 font-mono text-xs font-medium text-surface-container-lowest transition-colors duration-200 hover:bg-primary-container"
+            className="flex items-center gap-1.5 rounded bg-on-surface px-3 py-1 lg:px-3.5 py-2.5 font-mono text-xs font-medium text-surface-container-lowest transition-colors duration-200 hover:bg-primary-container"
           >
             <span className="text-xs sm:hidden">CV</span>
 

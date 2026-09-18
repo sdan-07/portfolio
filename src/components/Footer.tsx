@@ -1,4 +1,5 @@
-import MaterialIcon from "./MaterialIcon";
+import { ArrowUp } from "lucide-react";
+
 
 export default function Footer() {
   return (
@@ -18,7 +19,7 @@ export default function Footer() {
           <a href="https://github.com/sdan-07/portfolio" className="font-mono text-xs text-on-surface-variant hover:text-primary">Source</a>
           {/* <a href="#work" className="font-mono text-xs text-on-surface-variant hover:text-primary">RSS</a> */}
           <a href="#" aria-label="Return to top" className="flex h-8 w-8 items-center justify-center rounded bg-surface-container-high text-outline hover:text-primary">
-            <MaterialIcon className="text-base">arrow_upward</MaterialIcon>
+            <ArrowUp size={20} />
           </a>
         </div>
       </div>

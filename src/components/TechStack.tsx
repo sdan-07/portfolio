@@ -9,7 +9,7 @@ export default function TechStack() {
         number="02"
         label="Capabilities"
         title="Core Tech Skills"
-        description="Disciplined tools and technologies utilized to build and ship real software."
+        description="Disciplined tools and technologies utilized to build real applications."
       />
 
       <div className="grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-4">
