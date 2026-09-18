@@ -1,5 +1,11 @@
 import { FormEvent } from "react";
-import MaterialIcon from "./MaterialIcon";
+import {
+  Mail,
+  Clock3,
+  Code2,
+  Globe,
+  Send,
+} from "lucide-react";
 
 export default function Contact() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -30,23 +36,23 @@ export default function Contact() {
             {/* Contact Details */}
             <div className="space-y-3 pt-1">
               <ContactItem
-                icon="mail"
+                icon={Mail}
                 text="soumyadipdan7@gmail.com"
               />
 
               <ContactItem
-                icon="schedule"
+                icon={Clock3}
                 text="IST / UTC+5:30 • Typically responds in < 2 hrs"
               />
 
               <ContactLink
-                icon="code"
+                icon={Code2}
                 text="github.com/sdan-07"
                 href="https://github.com/sdan-07"
               />
 
               <ContactLink
-                icon="link"
+                icon={Globe}
                 text="linkedin.com/in/soumyadip-dan-538320303"
                 href="https://linkedin.com/in/sdan-07"
               />
@@ -108,9 +114,7 @@ export default function Contact() {
                 >
                   Send Message
 
-                  <MaterialIcon className="text-base">
-                    send
-                  </MaterialIcon>
+                  <Send className="h-4 w-4" />
                 </button>
               </div>
             </form>
@@ -152,18 +156,16 @@ function Input({
 }
 
 function ContactItem({
-  icon,
+  icon: Icon,
   text,
 }: {
-  icon: string;
+  icon: React.ElementType;
   text: string;
 }) {
   return (
     <div className="flex min-w-0 items-start gap-3">
       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded bg-surface-container text-primary">
-        <MaterialIcon className="text-lg">
-          {icon}
-        </MaterialIcon>
+        <Icon className="h-[18px] w-[18px]" />
       </span>
 
       <span className="min-w-0 break-words pt-1 font-mono text-xs leading-relaxed text-on-surface sm:text-sm">
@@ -174,20 +176,18 @@ function ContactItem({
 }
 
 function ContactLink({
-  icon,
+  icon: Icon,
   text,
   href,
 }: {
-  icon: string;
+  icon: React.ElementType;
   text: string;
   href: string;
 }) {
   return (
     <div className="flex min-w-0 items-start gap-3">
       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded bg-surface-container text-primary">
-        <MaterialIcon className="text-lg">
-          {icon}
-        </MaterialIcon>
+        <Icon className="h-[18px] w-[18px]" />
       </span>
 
       <a

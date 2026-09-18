@@ -1,4 +1,5 @@
-import MaterialIcon from "./MaterialIcon";
+import { SendHorizontal, SquareChevronRight, BadgeCheck } from "lucide-react";
+
 
 export default function Hero() {
   return (
@@ -43,7 +44,7 @@ export default function Hero() {
               className="flex w-full items-center justify-center gap-2 rounded bg-on-surface px-5 py-3 text-sm font-medium text-surface-container-lowest transition-colors hover:bg-primary-container sm:w-auto sm:px-6"
             >
               Explore Projects
-              <MaterialIcon>terminal</MaterialIcon>
+              <SquareChevronRight size={18} width={20}/>
             </a>
 
             <a
@@ -51,7 +52,7 @@ export default function Hero() {
               className="flex w-full items-center justify-center gap-2 rounded border border-outline-variant/40 px-5 py-3 text-sm text-on-surface-variant transition-colors hover:border-secondary hover:text-on-surface sm:w-auto sm:px-6"
             >
               Get In Touch
-              <MaterialIcon>send</MaterialIcon>
+              <SendHorizontal size={14}/>
             </a>
           </div>
 
@@ -111,9 +112,7 @@ function DeveloperTerminal() {
           <div className="mb-1 flex min-w-0 items-center gap-1.5 text-base font-semibold sm:gap-2 sm:text-xl">
             <span className="truncate">Soumyadip Dan</span>
 
-            <MaterialIcon className="shrink-0 text-primary">
-              verified
-            </MaterialIcon>
+            <BadgeCheck size={18} className="shrink-0 text-primary"/>
           </div>
 
           <div className="mb-2 inline-block max-w-full rounded-full border border-emerald-800/40 bg-emerald-950/40 px-2 py-0.5 font-mono text-[10px] leading-relaxed text-emerald-400 xs:px-2.5 xs:text-xs">

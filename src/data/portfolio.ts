@@ -1,3 +1,5 @@
+import { MonitorSmartphone, Server, CloudSync, CodeXml } from "lucide-react";
+
 export type Accent = "primary" | "secondary" | "tertiary";
 
 export type Project = {
@@ -51,28 +53,28 @@ export const projects: Project[] = [
 export const stackGroups = [
   {
     title: "Frontend",
-    icon: "devices",
+    icon: MonitorSmartphone,
     color: "text-primary",
     description: "Component modularity, sub-second TTFB, micro-interactions, responsive frameworks.",
     items: ["React.js", "React Router DOM", "Context API", "TypeScript", "Tailwind CSS"]
   },
   {
     title: "Backend",
-    icon: "dns",
+    icon: Server,
     color: "text-secondary",
     description: "High-concurrency services, structured schemas, low memory footprints.",
     items: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "RESTful APIs"]
   },
   {
     title: "Cloud & Tools",
-    icon: "cloud_sync",
+    icon: CloudSync,
     color: "text-tertiary",
     description: "Reliable persistence, distributed cache tiers, edge compute primitives.",
     items: ["AWS", "Git", "Github", "Postman", "Docker"]
   },
   {
     title: "Languages",
-    icon: "verified",
+    icon: CodeXml,
     color: "text-on-surface",
     description: "Programming languages I write and ship production code in.",
     items: ["Python", "Java", "JavaScript", "TypeScript", "SQL"]

@@ -6,12 +6,12 @@ export default function Experience() {
     <section id="experience" className="scroll-mt-24 space-y-8 sm:space-y-10">
       <SectionHeader
         number="03"
-        label="eDUCATION"
+        label="Education"
         title="Education & Experience"
         description="Chronological engineering impact and leadership responsibilities."
       />
 
-      <div className="relative space-y-10 border-l border-outline-variant/40 pl-5 sm:space-y-12 sm:pl-7 md:pl-10">
+      <div className="m-4 relative space-y-10 border-l border-outline-variant/40 pl-5 sm:space-y-12 sm:pl-7 md:pl-10">
         {experiences.map((item, index) => (
           <article key={item.title} className="group relative min-w-0">
             {/* Timeline dot */}

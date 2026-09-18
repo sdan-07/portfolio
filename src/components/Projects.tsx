@@ -1,6 +1,7 @@
 import { projects } from "../data/portfolio";
 import SectionHeader from "./SectionHeader";
 import MaterialIcon from "./MaterialIcon";
+import { ArrowUpRight, Code, Folder } from "lucide-react";
 
 const otherExplorations = [
   {
@@ -125,9 +126,11 @@ export default function Projects() {
                     >
                       {project.action}
 
-                      <MaterialIcon className="text-sm sm:text-base">
+                      {/* <MaterialIcon className="text-sm sm:text-base">
                         arrow_outward
-                      </MaterialIcon>
+                      </MaterialIcon> */}
+                      <ArrowUpRight size={21} className="hidden sm:block"/>
+                      <ArrowUpRight size={17} className="block sm:hidden"/>
                     </a>
 
                     <a
@@ -136,9 +139,8 @@ export default function Projects() {
                       rel="noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs text-on-surface-variant transition-colors hover:text-on-surface sm:text-sm"
                     >
-                      <MaterialIcon className="text-sm sm:text-base">
-                        code
-                      </MaterialIcon>
+                      <Code size={21} className="hidden sm:block"/>
+                      <Code size={17} className="block sm:hidden"/>
                       Source
                     </a>
                   </div>
@@ -211,9 +213,7 @@ export default function Projects() {
           >
             View all repositories
 
-            <MaterialIcon className="text-base">
-              arrow_outward
-            </MaterialIcon>
+            <ArrowUpRight size={19}/>
           </a>
         </div>
 
@@ -228,13 +228,9 @@ export default function Projects() {
               className="group flex min-w-0 flex-col rounded-lg border border-outline-variant/25 bg-surface-container-low/50 p-4 transition-all duration-300 hover:border-primary/25 hover:bg-surface-container-low sm:p-5"
             >
               <div className="mb-4 flex items-center justify-between">
-                <MaterialIcon className="text-xl text-outline transition-colors group-hover:text-primary">
-                  folder
-                </MaterialIcon>
+                <Folder size={20} className=" text-outline transition-colors group-hover:text-primary" />
 
-                <MaterialIcon className="text-base text-outline/60 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
-                  arrow_outward
-                </MaterialIcon>
+                <ArrowUpRight size={20} className="text-outline transition-colors group-hover:text-primary"/>
               </div>
 
               <h4 className="mb-2 break-words text-sm font-medium text-on-surface sm:text-base">
@@ -267,9 +263,7 @@ export default function Projects() {
           className="mt-5 flex w-full items-center justify-center gap-2 rounded-lg border border-outline-variant/30 px-4 py-3 text-xs text-on-surface-variant transition-colors hover:border-primary/30 hover:text-primary sm:hidden"
         >
           View all repositories
-          <MaterialIcon className="text-sm">
-            arrow_outward
-          </MaterialIcon>
+          <ArrowUpRight size={19} />
         </a>
       </div>
     </section>

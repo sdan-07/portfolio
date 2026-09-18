@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import MaterialIcon from "./MaterialIcon";
+import { ArrowUpRight, SquareChevronRight, Code, Menu, X } from "lucide-react";
 
 const links = [
   ["About", "#"],
@@ -24,10 +24,7 @@ export default function Navbar() {
       (entries) => {
         const visibleSections = entries
           .filter((entry) => entry.isIntersecting)
-          .sort(
-            (a, b) =>
-              b.intersectionRatio - a.intersectionRatio
-          );
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
         if (visibleSections.length > 0) {
           setActiveSection(visibleSections[0].target.id);
@@ -36,7 +33,7 @@ export default function Navbar() {
       {
         rootMargin: "-20% 0px -60% 0px",
         threshold: [0.1, 0.25, 0.5],
-      }
+      },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -78,9 +75,7 @@ export default function Navbar() {
           {links.map(([label, href]) => {
             const sectionId = href.replace("#", "");
             const isActive =
-              href === "#"
-                ? activeSection === ""
-                : activeSection === sectionId;
+              href === "#" ? activeSection === "" : activeSection === sectionId;
 
             return (
               <a
@@ -116,9 +111,10 @@ export default function Navbar() {
             aria-label="GitHub"
             className="flex h-9 w-9 items-center justify-center rounded border border-outline-variant/30 bg-surface-container-low text-on-surface-variant transition-all duration-200 hover:border-primary/40 hover:text-primary"
           >
-            <MaterialIcon className="text-lg">
+            {/* <MaterialIcon className="text-lg">
               code
-            </MaterialIcon>
+            </MaterialIcon> */}
+            <Code size={18}/>
           </a>
 
           {/* Terminal */}
@@ -127,9 +123,10 @@ export default function Navbar() {
             aria-label="Terminal"
             className="hidden h-9 w-9 items-center justify-center rounded border border-outline-variant/30 bg-surface-container-low text-on-surface-variant transition-all duration-200 hover:border-primary/40 hover:text-primary sm:flex"
           >
-            <MaterialIcon className="text-lg">
+            {/* <MaterialIcon className="text-lg">
               terminal
-            </MaterialIcon>
+            </MaterialIcon> */}
+            <SquareChevronRight size={18}/>
           </a>
 
           {/* Resume */}
@@ -141,13 +138,9 @@ export default function Navbar() {
           >
             <span className="sm:hidden">CV</span>
 
-            <span className="hidden sm:inline">
-              Resume
-            </span>
+            <span className="hidden sm:inline">Resume</span>
 
-            <MaterialIcon className="text-sm">
-              arrow_outward
-            </MaterialIcon>
+            <ArrowUpRight size={20} />
           </a>
 
           {/* Mobile Menu Button */}
@@ -163,9 +156,14 @@ export default function Navbar() {
                 : "border-outline-variant/30 text-on-surface-variant hover:border-primary/40 hover:text-primary"
             }`}
           >
-            <MaterialIcon className="text-lg">
+            {/* <MaterialIcon className="text-lg">
               {isMenuOpen ? "close" : "menu"}
-            </MaterialIcon>
+            </MaterialIcon> */}
+            {isMenuOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
           </button>
         </div>
       </div>
@@ -182,9 +180,7 @@ export default function Navbar() {
         <nav className="min-h-0 overflow-hidden px-4 sm:px-6">
           <div
             className={`mx-auto grid max-w-7xl grid-cols-2 gap-2 py-3 transition-transform duration-300 ease-out ${
-              isMenuOpen
-                ? "translate-y-0"
-                : "-translate-y-3"
+              isMenuOpen ? "translate-y-0" : "-translate-y-3"
             }`}
           >
             {links.map(([label, href]) => {
