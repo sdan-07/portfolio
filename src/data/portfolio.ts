@@ -12,7 +12,8 @@ export type Project = {
   action: string;
   accent: Accent;
   live: string,
-  source: string
+  source: string,
+  image: string
 };
 
 export const projects: Project[] = [
@@ -30,7 +31,8 @@ export const projects: Project[] = [
     source: "https://github.com/sdan-07/talentscan-ai",
     live: "https://interview-talentscan-ai.onrender.com",
     action: "Live Demo",
-    accent: "primary"
+    accent: "primary",
+    image: "/public/projects/talentscan-ui.png"
   },
   {
     type: "Full-Stack Web",
@@ -44,9 +46,10 @@ export const projects: Project[] = [
     ],
     stack: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
     source: "https://github.com/sdan-07/Dll_visualizer",
-    live: "#",
+    live: "https://dll-visualizer-mjm1.onrender.com",
     action: "Live Demo",
-    accent: "secondary"
+    accent: "secondary",
+    image: "/public/projects/dll.png"
   }
 ];
 
@@ -116,22 +119,5 @@ export const experiences = [
       "Relevant Coursework: Web Application Architecture, Algorithms & Complexity, Database Systems, Computer Systems, Software Engineering.",
       "Practiced core web fundamentals — HTML, CSS, and JavaScript through self-directed projects alongside coursework."
     ]
-  }
-];
-
-export const endorsements = [
-  {
-    initials: "ER",
-    name: "Dr. Elena Rostova",
-    role: "Professor & Dept. Chair, Computer Science",
-    color: "text-primary",
-    quote: "Alex demonstrated phenomenal software fundamentals and rare technical intuition. His capstone project was one of the cleanest, best-architected full-stack systems we have seen out of the department in years."
-  },
-  {
-    initials: "MV",
-    name: "Marcus Vance",
-    role: "Staff Software Engineer & Internship Mentor",
-    color: "text-secondary",
-    quote: "During his summer internship, Alex ramped up faster than most full-time hires. His pull requests were consistently well-documented, test-covered, and thoughtful. He has a very bright career ahead in full-stack engineering."
   }
 ];

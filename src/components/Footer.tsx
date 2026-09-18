@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:text-left">
           <a href="#" className="font-mono font-bold">sd.dev</a>
           <span className="hidden text-outline sm:inline">•</span>
-          <span className="text-sm text-on-surface-variant">
+          <span className="text-xs text-on-surface-variant">
             © {new Date().getFullYear()} Soumyadip Dan • MCA Student & Software Developer. All rights reserved.
           </span>
         </div>

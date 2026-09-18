@@ -31,7 +31,7 @@ export default function Projects() {
     <section id="work" className="scroll-mt-24 space-y-10 sm:space-y-12">
       <SectionHeader
         number="01"
-        label="Engineering Deliverables"
+        label="Projects"
         title="Featured Projects"
         description="Recent production systems, web apps, and developer tooling."
       />
@@ -151,38 +151,38 @@ export default function Projects() {
                   ========================= */}
               <div className="relative min-h-[220px] overflow-hidden rounded-lg border border-outline-variant/30 bg-surface-container-lowest/70 xs:min-h-[260px] sm:min-h-[320px] lg:min-h-[440px]">
                 {/* Screenshot placeholder */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-5 text-center sm:p-8">
-                  <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg border border-outline-variant/40 bg-surface-container-high sm:mb-4 sm:h-14 sm:w-14">
+                {/* <div className="absolute inset-0 flex flex-col items-center justify-center p-5 text-center sm:p-8">
+                  <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-lg border border-outline-variant/40 bg-surface-container-high sm:mb-4 sm:h-14 sm:w-14"> */}
                     {/* <MaterialIcon className="text-xl text-outline sm:text-2xl">
                       image
                     </MaterialIcon> */}
-                  </div>
+                  {/* </div> */}
 
-                  <p className="font-mono text-[10px] uppercase tracking-wider text-outline sm:text-xs">
+                  {/* <p className="font-mono text-[10px] uppercase tracking-wider text-outline sm:text-xs">
                     Project Screenshot
-                  </p>
+                  </p>  
 
                   <p className="mt-2 max-w-xs text-[10px] leading-5 text-outline/70 sm:text-xs">
                     Replace this area with a screenshot of the project.
                   </p>
-                </div>
+                </div> */}
 
                 {/* Browser-style top bar */}
-                <div className="absolute left-0 right-0 top-0 flex h-8 items-center gap-1.5 border-b border-outline-variant/20 bg-surface-container-highest/40 px-3 sm:h-9">
+                {/* <div className="absolute left-0 right-0 top-0 flex h-8 items-center gap-1.5 border-b border-outline-variant/20 bg-surface-container-highest/40 px-3 sm:h-9">
                   <span className="h-1.5 w-1.5 rounded-full bg-red-400/50 sm:h-2 sm:w-2" />
                   <span className="h-1.5 w-1.5 rounded-full bg-yellow-400/50 sm:h-2 sm:w-2" />
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400/50 sm:h-2 sm:w-2" />
-                </div>
+                </div> */}
 
-                {/*
-                  When you have an image:
+                
+                  {/* When you have an image: */}
 
                   <img
-                    src="/projects/project-name.png"
+                    src={`${project.image}`}
                     alt={`${project.title} screenshot`}
                     className="h-full w-full object-cover"
                   />
-                */}
+               
               </div>
             </div>
           </article>

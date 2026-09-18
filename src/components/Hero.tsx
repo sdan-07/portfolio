@@ -21,7 +21,7 @@ export default function Hero() {
 
         {/* Heading */}
         <h1 className="text-3xl font-semibold leading-[1.08] tracking-tight text-on-surface xs:text-4xl sm:text-5xl md:text-6xl">
-          Building modern web apps with{" "}
+          Modern web apps, built with{" "}
           <span className="text-primary underline decoration-primary/40 decoration-wavy underline-offset-8">
             clean code
           </span>
@@ -64,10 +64,10 @@ export default function Hero() {
         {/* Stats */}
         <div className="grid grid-cols-2 gap-x-4 gap-y-6 border-t border-outline-variant/30 pt-6 sm:grid-cols-4 sm:gap-4">
           {[
-            ["7.29 CGPA", "Current MCA", "text-primary"],
+            ["3+ Years", "Hands-On Coding", "text-primary"],
             ["Python", "Problem Solving (DSA)", "text-on-surface"],
-            ["MERN Stack", "Frontend & Backend", "text-on-surface"],
-            ["AWS & Docker", "Cloud & Deployment", "text-primary"],
+            ["Full-Stack", "Solutions to deploy", "text-on-surface"],
+            ["AWS & Docker", "Cloud Infrastructure", "text-primary"],
           ].map(([value, label, color]) => (
             <div key={value} className="min-w-0">
               <div
@@ -119,7 +119,7 @@ function DeveloperTerminal() {
             ● Open to Full-Time Roles
           </div>
 
-          <div className="font-mono text-[10px] xs:text-xs sm:text-sm">
+          <div className="font-mono text-[10px] xs:text-xs sm:text-sm ml-2">
             <span className="text-primary">MCA</span>{" "}
             <span className="text-outline">•</span>{" "}
             <span className="text-tertiary">CGPA 7.29 / 10.0</span>
