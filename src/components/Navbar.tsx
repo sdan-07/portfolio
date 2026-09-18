@@ -114,7 +114,8 @@ export default function Navbar() {
             {/* <MaterialIcon className="text-lg">
               code
             </MaterialIcon> */}
-            <Code size={18}/>
+            <Code size={18} className="hidden sm:block" />
+            <Code size={12} className="block sm:hidden" />
           </a>
 
           {/* Terminal */}
@@ -126,7 +127,9 @@ export default function Navbar() {
             {/* <MaterialIcon className="text-lg">
               terminal
             </MaterialIcon> */}
-            <SquareChevronRight size={18}/>
+            <SquareChevronRight size={18} className="hidden sm:block"/>
+            <SquareChevronRight size={12} className="block sm:hidden"/>
+
           </a>
 
           {/* Resume */}
@@ -134,13 +137,14 @@ export default function Navbar() {
             href="/resume/SoumyadipDan_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 rounded bg-on-surface px-3.5 py-1.5 font-mono text-xs font-medium text-surface-container-lowest transition-colors duration-200 hover:bg-primary-container"
+            className="flex items-center gap-1.5 rounded bg-on-surface px-3 py-1 font-mono text-xs font-medium text-surface-container-lowest transition-colors duration-200 hover:bg-primary-container"
           >
-            <span className="sm:hidden">CV</span>
+            <span className="text-xs sm:hidden">CV</span>
 
             <span className="hidden sm:inline">Resume</span>
 
-            <ArrowUpRight size={20} />
+            <ArrowUpRight size={18} className="hidden sm:block" />
+            <ArrowUpRight size={12} className="block sm:hidden" />
           </a>
 
           {/* Mobile Menu Button */}
@@ -150,7 +154,7 @@ export default function Navbar() {
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
             onClick={() => setIsMenuOpen((open) => !open)}
-            className={`flex h-9 w-9 items-center justify-center rounded border bg-surface-container-low transition-all duration-200 lg:hidden ${
+            className={`flex h-6.5 w-6.5 items-center justify-center rounded border bg-surface-container-low transition-all duration-200 lg:hidden ${
               isMenuOpen
                 ? "border-primary/50 text-primary"
                 : "border-outline-variant/30 text-on-surface-variant hover:border-primary/40 hover:text-primary"
@@ -160,9 +164,9 @@ export default function Navbar() {
               {isMenuOpen ? "close" : "menu"}
             </MaterialIcon> */}
             {isMenuOpen ? (
-              <X className="h-5 w-5" />
+              <X className="h-3 w-3" />
             ) : (
-              <Menu className="h-5 w-5" />
+              <Menu className="h-3 w-3" />
             )}
           </button>
         </div>
