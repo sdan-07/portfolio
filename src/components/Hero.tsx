@@ -3,7 +3,7 @@ import { SendHorizontal, SquareChevronRight, BadgeCheck } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className=" flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+    <section className="section-fade flex w-full flex-col gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
       {/* LEFT CONTENT */}
       <div className="w-full max-w-2xl flex-1 space-y-6">
         {/* Badge */}

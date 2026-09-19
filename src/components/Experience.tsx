@@ -3,7 +3,7 @@ import SectionHeader from "./SectionHeader";
 
 export default function Experience() {
   return (
-    <section id="experience" className="scroll-mt-24 space-y-8 sm:space-y-10">
+    <section id="experience" className="section-fade scroll-mt-24 space-y-8 sm:space-y-10">
       <SectionHeader
         number="03"
         label="Education"

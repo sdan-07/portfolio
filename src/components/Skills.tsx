@@ -3,7 +3,7 @@ import SectionHeader from "./SectionHeader";
 
 export default function Skills() {
   return (
-    <section id="stack" className="scroll-mt-24 space-y-8 sm:space-y-10">
+    <section id="stack" className="section-fade scroll-mt-24 space-y-8 sm:space-y-10">
       <SectionHeader
         number="02"
         label="Capabilities"

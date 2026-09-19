@@ -1,4 +1,4 @@
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import {
   Mail,
   Clock3,
@@ -8,15 +8,57 @@ import {
 } from "lucide-react";
 
 export default function Contact() {
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState("");
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    window.alert("Message dispatched successfully to Soumyadip Dan.");
+
+    setLoading(true);
+    setResult("");
+
+    try {
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+
+      // Web3Forms access key
+      formData.append(
+        "access_key",
+        "aa7020c0-0474-4ef6-82b7-e8289f7a1382"
+      );
+
+      const response = await fetch(
+        "https://api.web3forms.com/submit",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Message sent successfully!");
+        form.reset();
+      } else {
+        setResult("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setResult("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <section id="contact" className="scroll-mt-24 pt-2 sm:pt-4">
+    <section
+      id="contact"
+      className="section-fade scroll-mt-24 pt-2 sm:pt-4"
+    >
       <div className="relative overflow-hidden rounded-xl border-hairline bg-surface-container-low/80 p-4 sm:p-6 md:p-8 lg:p-12">
         <div className="grid min-w-0 grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-12">
+
           {/* LEFT — CONTACT INFO */}
           <div className="min-w-0 space-y-5 sm:space-y-6 lg:col-span-5">
             <div className="font-mono text-[10px] uppercase tracking-wider text-primary sm:text-xs">
@@ -62,6 +104,7 @@ export default function Contact() {
           {/* RIGHT — FORM */}
           <div className="min-w-0 rounded-lg border-hairline bg-surface-container-lowest/90 p-4 sm:p-6 md:p-8 lg:col-span-7">
             <form onSubmit={handleSubmit} className="space-y-4">
+
               {/* Name + Email */}
               <div className="grid min-w-0 gap-4 sm:grid-cols-2">
                 <Input
@@ -104,17 +147,28 @@ export default function Contact() {
 
               {/* Footer */}
               <div className="flex flex-col gap-4 border-t border-outline-variant/20 pt-4 sm:flex-row sm:items-center sm:justify-between sm:gap-3 sm:border-0 sm:pt-2">
-                <span className="font-mono text-[10px] text-outline sm:text-xs">
-                  ● 256-bit TLS encrypted
+
+                {/* Status */}
+                <span
+                  className={`font-mono text-[10px] sm:text-xs ${
+                    result.includes("successfully")
+                      ? "text-green-400"
+                      : result
+                        ? "text-red-400"
+                        : "text-outline"
+                  }`}
+                >
+                  {result || "● 256-bit TLS encrypted"}
                 </span>
 
                 <button
                   type="submit"
-                  className="flex w-full cursor-pointer items-center justify-center gap-2 rounded bg-on-surface px-5 py-3 text-sm font-medium text-surface-container-lowest transition-colors hover:bg-primary-container sm:w-auto sm:px-6 sm:py-2.5"
+                  disabled={loading}
+                  className="flex w-full cursor-pointer items-center justify-center gap-2 rounded bg-on-surface px-5 py-3 text-sm font-medium text-surface-container-lowest transition-colors hover:bg-primary-container disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-6 sm:py-2.5"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
 
-                  <Send className="h-4 w-4" />
+                  {!loading && <Send className="h-4 w-4" />}
                 </button>
               </div>
             </form>

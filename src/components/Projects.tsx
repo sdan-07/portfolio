@@ -28,7 +28,7 @@ const otherExplorations = [
 
 export default function Projects() {
   return (
-    <section id="work" className="scroll-mt-24 space-y-10 sm:space-y-12">
+    <section id="work" className="section-fade scroll-mt-24 space-y-10 sm:space-y-12">
       <SectionHeader
         number="01"
         label="Projects"
@@ -192,7 +192,7 @@ export default function Projects() {
       {/* =========================
           OTHER EXPLORATIONS
           ========================= */}
-      <div className="pt-2 sm:pt-4">
+      <div className="section-fade pt-2 sm:pt-4">
         <div className="mb-5 flex items-end justify-between gap-4">
           <div className="min-w-0">
             <div className="mb-1 font-mono text-[10px] uppercase tracking-wider text-outline sm:text-xs">
