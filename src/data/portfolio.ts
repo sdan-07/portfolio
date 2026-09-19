@@ -32,7 +32,7 @@ export const projects: Project[] = [
     live: "https://interview-talentscan-ai.onrender.com",
     action: "Live Demo",
     accent: "primary",
-    image: "/public/projects/talentscan-ui.png"
+    image: "/projects/talentscan-ui.png"
   },
   {
     type: "Full-Stack Web",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     live: "https://dll-visualizer-mjm1.onrender.com",
     action: "Live Demo",
     accent: "secondary",
-    image: "/public/projects/dll.png"
+    image: "/projects/dll.png"
   }
 ];
 

@@ -113,8 +113,8 @@ h1 {
   opacity: 0.35;
   transform: translateY(12px);
   transition:
-    opacity 800ms ease-out,
-    transform 800ms ease-out;
+    opacity 700ms ease-out,
+    transform 700ms ease-out;
   will-change: opacity, transform;
 }
 
