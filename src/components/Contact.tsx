@@ -126,7 +126,7 @@ export default function Contact() {
               {/* Role */}
               <Input
                 label="ROLE / POSITION HIRING FOR"
-                name="project"
+                name="position"
                 placeholder="e.g. Software Engineer, SDE Intern"
               />
 
