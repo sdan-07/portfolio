@@ -40,8 +40,12 @@ export default function Contact() {
       if (data.success) {
         setResult("Message sent successfully!");
         form.reset();
+        console.log("success");
+        
       } else {
         setResult("Something went wrong. Please try again.");
+        console.log("mail error");
+        
       }
     } catch (error) {
       console.error("Form submission error:", error);
