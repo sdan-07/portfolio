@@ -134,7 +134,7 @@ export default function Navbar() {
 
           {/* Resume */}
           <a
-            href="/resume/SoumyadipDan-Resume.pdf"
+            href="/resume/SoumyadipDan-Resume_updated.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 rounded bg-on-surface px-3 py-1 lg:px-3.5 py-2.5 font-mono text-xs font-medium text-surface-container-lowest transition-colors duration-200 hover:bg-primary-container"
